@@ -1,0 +1,53 @@
+{
+  "name": "zotero-personal",
+  "version": "0.2.2",
+  "description": "个人版 Zotero 插件（基于官方 0.2.1 fork）：补齐官方安装包缺失的 pdf.js CMaps/标准字体数据，修复 CNKI 等中文 PDF 在侧栏阅读器中的文字乱码。",
+  "author": {
+    "name": "personal fork (ZCode upstream)"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "mcpServers": {
+    "zotero": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${ZCODE_PLUGIN_ROOT}/dist/server.mjs"
+      ],
+      "cwd": "${ZCODE_PROJECT_DIR}",
+      "timeoutMs": 420000,
+      "env": {
+        "ZCODE_WORKSPACE_ROOT": "${ZCODE_PROJECT_DIR}",
+        "ZCODE_PLUGIN_DATA": "${ZCODE_PLUGIN_DATA}",
+        "ZOTERO_URL": "${user_config.zoteroUrl}"
+      }
+    }
+  },
+  "userConfig": {
+    "zoteroUrl": {
+      "type": "string",
+      "default": "",
+      "title": "Zotero 地址",
+      "description": "可选。Zotero 本地服务地址，默认 http://127.0.0.1:23119。仅在修改过 Zotero 的端口时填写；只接受本机地址。"
+    }
+  },
+  "ui": {
+    "surfaces": [
+      {
+        "id": "zotero-personal",
+        "title": {
+          "zh-CN": "Zotero（个人版）",
+          "en-US": "Zotero (personal)"
+        },
+        "icon": "library",
+        "server": "zotero",
+        "resourceUri": "ui://zotero/panel.html",
+        "availability": "session"
+      }
+    ]
+  },
+  "description_i18n": {
+    "en": "Personal fork of the official Zotero plugin (0.2.1): ships the pdf.js CMaps/standard-font data missing from the official package, fixing garbled text in Chinese (CNKI) PDFs in the side-panel reader.",
+    "zh-CN": "个人版 Zotero 插件（基于官方 0.2.1 fork）：补齐官方安装包缺失的 pdf.js CMaps/标准字体数据，修复 CNKI 等中文 PDF 在侧栏阅读器中的文字乱码。"
+  }
+}

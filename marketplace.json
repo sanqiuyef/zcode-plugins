@@ -1,0 +1,19 @@
+{
+  "name": "personal-plugins",
+  "plugins": [
+    {
+      "name": "zotero-personal",
+      "source": "./plugins/zotero-personal",
+      "version": "0.2.2",
+      "description": "个人版 Zotero 插件（基于官方 0.2.1 fork）：补齐官方安装包缺失的 pdf.js CMaps/标准字体数据，修复 CNKI 等中文 PDF 在侧栏阅读器中的文字乱码。",
+      "displayName": "Zotero（个人版）",
+      "displayName_i18n": {
+        "zh-CN": "Zotero（个人版）"
+      },
+      "description_i18n": {
+        "zh-CN": "在侧栏使用 Zotero 文库（个人 fork：修复中文 PDF 阅读乱码）"
+      },
+      "icon": "https://raw.githubusercontent.com/sanqiuyef/zcode-plugins/main/plugins/zotero-personal/assets/icon.png"
+    }
+  ]
+}
