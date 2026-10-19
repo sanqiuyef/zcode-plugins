@@ -2,6 +2,20 @@
   "name": "personal-plugins",
   "plugins": [
     {
+      "name": "blender-personal",
+      "source": "./plugins/blender-personal",
+      "version": "0.3.0",
+      "description": "个人版 Blender 插件（fork 官方 0.2.3，整合 mcp-for-blender）：保留 headless 场景编辑/渲染/面板，新增 Live 模式直连正在运行的 Blender GUI——执行 bpy 代码、截视口、查场景、导入 PolyHaven 资产。",
+      "displayName": "Blender（个人版）",
+      "displayName_i18n": {
+        "zh-CN": "Blender（个人版）"
+      },
+      "description_i18n": {
+        "zh-CN": "headless 编辑渲染 + Live 直连正在运行的 Blender（个人 fork：整合实时通道与 PolyHaven 资产）"
+      },
+      "icon": "https://raw.githubusercontent.com/sanqiuyef/zcode-plugins/main/plugins/blender-personal/assets/icon.png"
+    },
+    {
       "name": "zotero-personal",
       "source": "./plugins/zotero-personal",
       "version": "0.2.2",
