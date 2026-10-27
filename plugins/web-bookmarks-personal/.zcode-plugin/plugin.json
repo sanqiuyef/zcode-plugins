@@ -1,0 +1,40 @@
+{
+  "name": "web-bookmarks-personal",
+  "version": "0.1.0",
+  "description": "侧栏网站收藏夹：一键在 ZCode 内置浏览器打开 DeepSeek 网页端等常用网站，支持搜索、添加、编辑和删除。",
+  "description_i18n": {
+    "en": "A sidebar bookmark shelf that opens DeepSeek Web and other favorite sites in ZCode's built-in browser with one click.",
+    "zh-CN": "侧栏网站收藏夹：一键在 ZCode 内置浏览器打开 DeepSeek 网页端等常用网站，支持搜索、添加、编辑和删除。"
+  },
+  "author": {
+    "name": "sanqiuyef"
+  },
+  "license": "MIT",
+  "skills": "skills",
+  "mcpServers": {
+    "bookmarks": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${ZCODE_PLUGIN_ROOT}/dist/server.mjs"],
+      "cwd": "${ZCODE_PROJECT_DIR}",
+      "env": {
+        "ZCODE_BOOKMARKS_DATA": "${ZCODE_PLUGIN_DATA}"
+      }
+    }
+  },
+  "ui": {
+    "surfaces": [
+      {
+        "id": "bookmarks",
+        "title": {
+          "zh-CN": "网站收藏",
+          "en-US": "Bookmarks"
+        },
+        "icon": "bookmark",
+        "server": "bookmarks",
+        "resourceUri": "ui://web-bookmarks/panel.html",
+        "availability": "session"
+      }
+    ]
+  }
+}

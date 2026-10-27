@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>网站收藏</title>
+    <!-- 由 ui-src/build.mjs 生成：CSS/JS 内联，不引用任何外部资源。 -->
+    <style>/*__CSS__*/</style>
+  </head>
+  <body>
+    <div class="app">
+      <header class="top">
+        <div class="topline">
+          <div class="brand">
+            <span class="brand-icon" aria-hidden="true">☆</span>
+            <div class="brand-text">
+              <div class="brand-title">网站收藏</div>
+              <div class="brand-sub" id="status">正在连接…</div>
+            </div>
+          </div>
+          <button class="icon-btn primary-soft" id="addBtn" type="button" title="添加网站" aria-label="添加网站">+</button>
+        </div>
+        <label class="search">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="搜索收藏…" autocomplete="off" spellcheck="false" />
+          <button class="search-clear" id="searchClear" type="button" title="清除搜索" aria-label="清除搜索" hidden>×</button>
+        </label>
+      </header>
+
+      <main class="main" id="main">
+        <div class="hero-wrap" id="heroWrap"></div>
+        <div class="list" id="list"></div>
+      </main>
+
+      <footer class="foot">
+        <span id="count">—</span>
+        <button class="link-btn" id="refreshBtn" type="button">刷新</button>
+      </footer>
+    </div>
+
+    <div class="overlay" id="overlay" hidden>
+      <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+        <div class="sheet-head">
+          <h2 id="sheetTitle">添加网站</h2>
+          <button class="icon-btn" id="closeSheet" type="button" aria-label="关闭">×</button>
+        </div>
+        <form id="bookmarkForm" autocomplete="off">
+          <label class="field">
+            <span>名称</span>
+            <input id="fTitle" maxlength="120" placeholder="例如：DeepSeek 网页端" />
+          </label>
+          <label class="field">
+            <span>网址</span>
+            <input id="fUrl" maxlength="2048" placeholder="https://chat.deepseek.com/" inputmode="url" />
+          </label>
+          <label class="field">
+            <span>备注 <em>可选</em></span>
+            <input id="fNote" maxlength="200" placeholder="一句话说明" />
+          </label>
+          <p class="form-error" id="formError" hidden></p>
+          <div class="sheet-actions">
+            <button class="btn" id="cancelBtn" type="button">取消</button>
+            <button class="btn primary" id="saveBtn" type="submit">保存</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="overlay" id="confirmOverlay" hidden>
+      <div class="sheet compact" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle">
+        <h2 id="confirmTitle">删除收藏？</h2>
+        <p class="confirm-text" id="confirmText"></p>
+        <div class="sheet-actions">
+          <button class="btn" id="confirmCancel" type="button">取消</button>
+          <button class="btn danger" id="confirmDelete" type="button">删除</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" hidden></div>
+    <script>/*__JS__*/</script>
+  </body>
+</html>

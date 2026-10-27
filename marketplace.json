@@ -28,6 +28,20 @@
         "zh-CN": "在侧栏使用 Zotero 文库（个人 fork：修复中文 PDF 阅读乱码）"
       },
       "icon": "https://raw.githubusercontent.com/sanqiuyef/zcode-plugins/main/plugins/zotero-personal/assets/icon.png"
+    },
+    {
+      "name": "web-bookmarks-personal",
+      "source": "./plugins/web-bookmarks-personal",
+      "version": "0.1.0",
+      "description": "侧栏网站收藏夹：一键在 ZCode 内置浏览器打开 DeepSeek 网页端等常用网站，支持搜索、添加、编辑和删除。",
+      "displayName": "网站收藏（内置浏览器）",
+      "displayName_i18n": {
+        "zh-CN": "网站收藏（内置浏览器）"
+      },
+      "description_i18n": {
+        "zh-CN": "一键在内置浏览器打开 DeepSeek 网页端和常用网站，可搜索、添加、编辑、删除。"
+      },
+      "category": "productivity"
     }
   ]
 }

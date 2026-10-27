@@ -1,0 +1,17 @@
+{
+  "name": "web-bookmarks-personal-ui",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs && node ../server-src/build.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p ../server-src/tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@modelcontextprotocol/ext-apps": "2.0.4",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.9.3",
+    "zod": "4.6.7"
+  }
+}
