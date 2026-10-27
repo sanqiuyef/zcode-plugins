@@ -41,6 +41,7 @@
       "description_i18n": {
         "zh-CN": "一键在内置浏览器打开 DeepSeek 网页端和常用网站，可搜索、添加、编辑、删除。"
       },
+      "icon": "https://raw.githubusercontent.com/sanqiuyef/zcode-plugins/main/plugins/web-bookmarks-personal/assets/icon.png",
       "category": "productivity"
     }
   ]
